@@ -1,19 +1,35 @@
-import React, { createContext, useContext, useState, ReactElement, ReactChild, StyleHTMLAttributes } from 'react';
+import React, {
+  createContext,
+  useContext,
+  useState,
+  ReactElement,
+  ReactChild,
+  StyleHTMLAttributes,
+} from 'react';
 
 import darkStyle from './dark';
 import lightStyle from './light';
 
-const defaultValue = { theme: { style: darkStyle }, setTheme: (_: 'light' | 'dark'): void => {} };
+const defaultValue = {
+  theme: { style: darkStyle },
+  setTheme: (_: 'light' | 'dark'): void => {},
+};
 export const Theme = createContext(defaultValue);
 
 export const allThemes = {
-  'dark': { style: darkStyle },
-  'light': { style: lightStyle },
-}
+  dark: { style: darkStyle },
+  light: { style: lightStyle },
+};
 
-export type themeType = 'light' | 'dark' ;
+export type themeType = 'light' | 'dark';
 
-export const ThemeProvider = ({ name, children }: { name: themeType, children: ReactChild }): ReactElement => {
+export const ThemeProvider = ({
+  name,
+  children,
+}: {
+  name: themeType;
+  children: ReactChild;
+}): ReactElement => {
   const [currentTheme, setCurrentTheme] = useState(allThemes[name]);
 
   const setTheme = (name: themeType): void => setCurrentTheme(allThemes[name]);

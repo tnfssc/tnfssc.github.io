@@ -6,7 +6,7 @@ interface AppProps {}
 
 const App = ({}: AppProps) => {
   return (
-    <ThemeProvider name='dark'>
+    <ThemeProvider name="dark">
       <Routes />
     </ThemeProvider>
   );
