@@ -1,6 +1,6 @@
 import React from "../../web_modules/react.js";
-import Root from "../pages/index.js";
+import Root2 from "../pages/Root/index.js";
 const RootRoute = ({}) => {
-  return /* @__PURE__ */ React.createElement(Root, null);
+  return /* @__PURE__ */ React.createElement(Root2, null);
 };
 export default RootRoute;
