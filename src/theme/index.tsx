@@ -4,7 +4,6 @@ import React, {
   useState,
   ReactElement,
   ReactChild,
-  StyleHTMLAttributes,
 } from 'react';
 
 import darkStyle from './dark';
@@ -12,7 +11,7 @@ import lightStyle from './light';
 
 const defaultValue = {
   theme: { style: darkStyle },
-  setTheme: (_: 'light' | 'dark'): void => {},
+  setTheme: (_: themeType): void => {},
 };
 export const Theme = createContext(defaultValue);
 

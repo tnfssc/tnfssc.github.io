@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Root from '../pages';
+import Root from '../pages/Root';
 
 interface RootRouteProps {}
 
