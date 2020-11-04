@@ -1,4 +1,4 @@
-import type { RGB } from 'color-name'
+import type { RGB } from 'color-name';
 
 export const RGBtorgba = (rgb: RGB | string, a?: number): string => {
   if (typeof rgb == 'string') return rgb;

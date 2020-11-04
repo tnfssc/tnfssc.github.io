@@ -11,7 +11,13 @@ interface RootProps {}
 const Root = ({}: RootProps) => {
   const { theme } = useTheme();
   return (
-    <div className='FullPage' style={{ color: RGBtorgba(theme.style.color), backgroundColor: RGBtorgba(theme.style.backgroundColor) }}>
+    <div
+      className="FullPage"
+      style={{
+        color: RGBtorgba(theme.style.color),
+        backgroundColor: RGBtorgba(theme.style.backgroundColor),
+      }}
+    >
       {JSON.stringify(theme)}
       {JSON.stringify(RGBtorgba(theme.style.color))}
       <Navbar />
